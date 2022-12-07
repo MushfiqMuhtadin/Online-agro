@@ -1,0 +1,169 @@
+.addform {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.add-product-form {
+    height: 430px;
+    width: 500px;
+    background-color: rgb(164, 245, 133);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.add-product-form h3 {
+    font-size: xx-large;
+}
+
+.add-product-form .box {
+    height: 50px;
+    width: 400px;
+    margin: 16px;
+    font-size: x-large;
+    background-color: whitesmoke;
+
+}
+
+.btn {
+    height: 50px;
+    width: 400px;
+    background-color: rgb(218, 239, 183);
+font-size: x-large;
+}
+
+.display-product-table table{
+   width: 90%;
+   text-align: center;
+}
+
+.display-product-table table thead th{
+   padding:1.5rem;
+   font-size: 2rem;
+   background-color: var(--black);
+   color:var(--white);
+}
+
+.display-product-table table td{
+   padding:1.5rem;
+   font-size: 2rem;
+   color:var(--black);
+   background-color: rgb(194, 252, 206);
+}
+
+.display-product-table table td:first-child{
+   padding:0;
+}
+
+.display-product-table table tr:nth-child(even){
+   background-color: var(--bg-color);
+}
+
+.display-product-table .empty{
+   margin-bottom: 2rem;
+   text-align: center;
+   background-color: var(--bg-color);
+   color:var(--black);
+   font-size: 2rem;
+   padding:1.5rem;
+}
+
+.option-btn{
+ display: block;
+ background-color: var(--orange);
+ height: 30px;
+ width:110px;
+ text-align: center;
+ cursor: pointer;
+ padding: 10px;
+border-radius: 10px;
+text-decoration: none;
+color: #fff;
+font-size: x-large;
+margin: 10px;
+
+}
+.cancel-btn a{
+color: #fff;
+text-decoration: none;
+text-align: center;
+}
+
+.cancel-btn{
+ display: block;
+ background-color: var(--orange);
+ height: 40px;
+ width:110px;
+ text-align: center;
+ cursor: pointer;
+ 
+border-radius: 10px;
+text-decoration: none;
+color: #fff;
+font-size: x-large;
+margin: 10px;
+
+}
+
+.delete-btn{
+   display: block;
+ background-color: var(--red);
+ height: 30px;
+ width:110px;
+ text-align: center;
+ cursor: pointer;
+ padding: 10px;
+border-radius: 10px;
+text-decoration: none;
+color: #fff;
+font-size: x-large;
+margin: 10px;
+}
+
+.edit-form-container{
+   
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+   
+   width: 100%;
+}
+ .edit-form-container form h1{
+font-size: xx-large;
+ }
+ 
+
+.edit-form-container form{
+  height: 430px;
+    width: 500px;
+    background-color: rgb(164, 245, 133);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.edit-form-container form .box{
+  height: 160px;
+    width: 400px;
+    margin: 16px;
+    font-size: x-large;
+    
+    background-color: whitesmoke;
+}
+
+
+:root{
+   --blue:#2980b9;
+   --red:tomato;
+   --orange:orange;
+   --black:#333;
+   --white:#fff;
+   --bg-color:#eee;
+   --dark-bg:rgba(0,0,0,.7);
+   --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+   --border:.1rem solid #999;
+}

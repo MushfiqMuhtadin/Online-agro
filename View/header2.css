@@ -1,0 +1,61 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
+
+}
+.ukash{
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    
+    color: rgb(55, 46, 46);
+}
+
+.navbar{
+    display: flex;
+    justify-content:space-between;
+    height: 80px;
+    width: 100%;
+    background-color: rgb(139, 244, 150);
+    margin: 0%;
+    padding: 0%;
+}
+
+#logo{
+    margin-left: 50px;
+    margin-top: 0px;
+    width: 65px;
+    height:65px ;
+   
+}
+
+li{
+    list-style: none;
+}
+
+li a{
+    text-decoration: none;
+    font-size: 18px;
+    font-weight:600;
+    padding: 20px;
+    color: rgb(55, 46, 46);
+}
+
+.navlist{
+    display: flex;
+  align-items: center;
+  margin-right: 20px;
+    
+}
+.cartcount{
+    background-color:aliceblue ;
+    display: inline-block;
+    height: 30px;
+    width: 20px;
+    border-radius: 7px;
+    text-align: center;
+    margin-left: 10px;
+}
+
