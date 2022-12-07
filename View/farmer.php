@@ -2,6 +2,12 @@
 session_start();
 
 if (isset($_SESSION['flag'])) {
+    
+    include'../model/config.php';
+    $email = $_SESSION['email'];
+    $sql = "select * from users where email='$email'";
+    $result = mysqli_query($conn, $sql);
+    $row = mysqli_fetch_assoc($result);
     include('../view/header.php');
 ?>
 

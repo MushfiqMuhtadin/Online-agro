@@ -24,17 +24,13 @@ if (isset($_SESSION['flag'])) {
 
 <body>
 
-
-
-
-
     <div class="container">
 
         <section class="addform">
 
 
             <form action="../Controller/farmercontroller.php" method="post" class="add-product-form" enctype="multipart/form-data">
-                <h3>Crop status</h3>
+                <h3>Farmer's Crop status</h3>
 
 
                 <input type="text" name="name" placeholder="enter Crop name" class="box" required>

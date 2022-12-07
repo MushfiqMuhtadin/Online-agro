@@ -1,12 +1,12 @@
 <?php
 session_start();
 require_once('../Model/usermodel.php');
-include('../view/header.php');
+
 include('../model/config.php');
 
 
 if (isset($_SESSION['flag'])) {
-
+    include('../view/header.php');
     $conn = getConnection();
     $email = $_SESSION['email'];
     $usertype = $_SESSION['usertype'];

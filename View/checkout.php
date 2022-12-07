@@ -44,7 +44,7 @@ if (isset($_SESSION['flag'])) {
                     $grand_total = 0;
                     if (mysqli_num_rows($select_cart) > 0) {
                         while ($fetch_cart = mysqli_fetch_assoc($select_cart)) {
-                            $total_price = number_format($fetch_cart['price'] * $fetch_cart['quantity']);
+                            $total_price = number_format($fetch_cart['price'] );
                             $grand_total = $total += $total_price;
                     ?>
                             <span><?= $fetch_cart['name']; ?>(<?= $fetch_cart['quantity']; ?>)</span>

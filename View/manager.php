@@ -32,29 +32,37 @@ if (isset($_SESSION['flag'])) {
             <div class="welcome">
                 <h1>Welcome <?= $row['usertype'] ?></h1>
             </div>
+            <?php
+            if (isset($_GET['message'])) { ?>
+                <h3 class=""><?php echo $_GET['message']; ?></h3> <br>
+            <?php } ?>
         </center>
         <section class="main">
 
 
             <div class="card">
-                <h1>Manage Users</h1>
-                <button id="users">Go</button>
+                <h1>Requests</h1>
+                <button id="request">Go</button>
             </div>
 
             <div class="card">
-                <h1>Inventory</h1>
-                <button id="inventory">Go</button>
+                <h1>Orders</h1>
+                <button id="order">Go</button>
             </div>
 
             <div class="card">
-                <h1>Transaction</h1>
-                <button id="transaction">Go</button>
+                <h1>Feedbacks</h1>
+                <button id="feedback">Go</button>
+            </div>
+            <div class="card">
+                <h1>crop status</h1>
+                <button id="crop">Go</button>
             </div>
 
-        </section>
+        </section><br><br><br><br>
 
         <section id="main">
-            <script src="../Controller/adminquery.js"></script>
+            <script src="../Controller/managerquery.js"></script>
         </section>
 
     </body>

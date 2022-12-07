@@ -5,6 +5,7 @@ if (isset($_SESSION['flag'])) {
 
 ?>
 
+
     <!DOCTYPE html>
     <html lang="en">
 
@@ -12,16 +13,24 @@ if (isset($_SESSION['flag'])) {
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../view/transaction.css">
-        <title>Document</title>
+        <title></title>
+
+        <!-- font awesome cdn link  -->
+
+        <!-- custom css file link  -->
+        <link rel="stylesheet" href="../View/orders.css">
+
     </head>
 
     <body>
-        <br><br>
+
+
+
+
         <div class="container">
 
             <center>
-                <h1>SALES</h1> 
+                <h1>Pending Orders</h1> <br>
                 <section class="display-product-table">
 
                     <table>
@@ -31,24 +40,23 @@ if (isset($_SESSION['flag'])) {
                             <th>Number</th>
                             <th>email</th>
                             <th>method</th>
+                            <th>flat</th>
+                            <th>street</th>
+                            <th>city</th>
+                            <th>country</th>
+                            <th>pin code</th>
                             <th>Total product</th>
                             <th>Total price</th>
-
+                            <th>Action</th>
 
                         </thead>
 
                         <tbody>
                             <?php
-                            $total = 0;
-                            $grand_total = 0;
 
                             $select_products = mysqli_query($conn, "SELECT * FROM `order`");
                             if (mysqli_num_rows($select_products) > 0) {
                                 while ($row = mysqli_fetch_assoc($select_products)) {
-                                    $total_price = number_format($row['total_price']);
-                                    $grand_total = $total += $total_price;
-
-
                             ?>
                                     <center>
                                         <tr>
@@ -57,13 +65,21 @@ if (isset($_SESSION['flag'])) {
                                             <td><?php echo $row['number']; ?></td>
                                             <td><?php echo $row['email']; ?> </td>
                                             <td><?php echo $row['method']; ?></td>
+                                            <td><?php echo $row['flat']; ?></td>
+                                            <td><?php echo $row['street']; ?> </td>
+                                            <td><?php echo $row['city']; ?></td>
+                                            <td><?php echo $row['country']; ?></td>
+                                            <td><?php echo $row['pin_code']; ?></td>
                                             <td><?php echo $row['total_products']; ?> </td>
                                             <td><?php echo $row['total_price']; ?> TK</td>
+
+
+                                            <td><a href="../controller/managercontroller.php?deleteorder=<?php echo $row['id']; ?>" class="approve-btn" onclick="return confirm('are your sure you want to Approve this?');"> Approve </a></td>
+
 
                                         </tr>
                                     </center>
                             <?php
-
                                 };
                             } else {
                                 echo "<div class='empty'>sorry</div>";
@@ -73,18 +89,10 @@ if (isset($_SESSION['flag'])) {
                     </table>
 
                 </section>
-
             </center>
+        </div>
 
-        </div><br>
-        <center>
-            <span class="grand-total"> Grand total Sale: <?= $grand_total; ?> tk </span>
-
-        </center>
     </body>
 
     </html>
-
-
-
 <?php } ?>

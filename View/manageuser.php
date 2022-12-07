@@ -1,5 +1,5 @@
   <?php
-session_start();
+    session_start();
 @include '../model/config.php';
 if (isset($_SESSION['flag'])) {
     
@@ -79,7 +79,7 @@ if (isset($_SESSION['flag'])) {
 
 
               <?php
-                session_start();
+                
 
                 $conn = mysqli_connect("localhost", "root", "", "agro");
                 $sql = "SELECT id, username, email, phone, address, usertype from users";
