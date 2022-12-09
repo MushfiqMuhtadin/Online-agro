@@ -49,9 +49,10 @@ body {
 .shopping-cart table input[type="number"]{
    border: var(--border);
    padding:0.5rem 1rem;
-   font-size: 2rem;
+   font-size: 1.5rem;
    color:var(--black);
-   width: 10rem;
+   width: 2rem;
+   margin: 5px;
 }
 
 .shopping-cart table input[type="submit"]{
@@ -189,7 +190,9 @@ a.disabled{
    padding: 0.5rem;
    margin-top: 1rem;
 }
-
+.update{
+   display: flex;
+}
 
 
 

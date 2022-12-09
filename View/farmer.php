@@ -33,9 +33,11 @@ if (isset($_SESSION['flag'])) {
             </div>
             <?php
             if (isset($_GET['message'])) { ?>
-                <h3 class=""><?php echo $_GET['message']; ?></h3> <br>
+                <h3 ><?php echo $_GET['message']; ?></h3> <br>
             <?php } ?>
         </center>
+
+        <!-- jquery ajax -->
         <section class="main">
 
 
@@ -62,6 +64,7 @@ if (isset($_SESSION['flag'])) {
 
     </body>
 
+    <!-- jquery ajax -->
     <br> <br>
     <?php
     include('../view/footer.php');

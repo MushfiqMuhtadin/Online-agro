@@ -10,6 +10,8 @@ $(document).ready(function () {
     });
   });
 });
+
+
 $(document).ready(function () {
   $("#inventory").on("click", function (e) {
     $("#main").show();
@@ -22,6 +24,8 @@ $(document).ready(function () {
     });
   });
 });
+
+
 $(document).ready(function () {
   $("#transaction").on("click", function (e) {
     $("#main").show();

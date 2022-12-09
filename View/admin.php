@@ -38,13 +38,17 @@ if (isset($_SESSION['flag'])) {
             <div class="welcome">
                 <h1>Welcome <?= $row['usertype'] ?></h1>
             </div>
+            
             <?php
             if (isset($_GET['message'])) { ?>
                 <h3 class=""><?php echo $_GET['message']; ?></h3> <br>
             <?php } ?>
+
         </center>
+
         <section class="main">
 
+<!-- jquery ajax -->
 
             <div class="card">
                 <h1>Manage Users</h1>
@@ -57,10 +61,13 @@ if (isset($_SESSION['flag'])) {
             </div>
 
             <div class="card">
+                
                 <h1>Sales</h1>
+
                 <button id="transaction">Go</button>
             </div>
 
+<!-- jquery ajax -->
         </section>
 
         <section id="main">

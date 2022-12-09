@@ -39,13 +39,14 @@ if (isset($_SESSION['flag'])) {
 
                         <tbody>
                             <?php
+                            
                             $total = 0;
                             $grand_total = 0;
 
                             $select_products = mysqli_query($conn, "SELECT * FROM `order`");
                             if (mysqli_num_rows($select_products) > 0) {
                                 while ($row = mysqli_fetch_assoc($select_products)) {
-                                    $total_price = number_format($row['total_price']);
+                                    $total_price = $row['total_price'];
                                     $grand_total = $total += $total_price;
 
 
@@ -78,7 +79,7 @@ if (isset($_SESSION['flag'])) {
 
         </div><br>
         <center>
-            <span class="grand-total"> Grand total Sale: <?= $grand_total; ?> tk </span>
+            <span class="grand-total"> Grand total Sale: <?=number_format($grand_total) ; ?> tk </span>
 
         </center>
     </body>

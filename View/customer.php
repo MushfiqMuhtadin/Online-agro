@@ -24,7 +24,6 @@ if (isset($_SESSION['flag'])) {
         <link rel="stylesheet" href="customer.css">
         <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 
     </head>
@@ -53,6 +52,7 @@ if (isset($_SESSION['flag'])) {
                 <h1 class="heading">Latest products</h1>
 
             </center>
+
             <div class="box-container">
 
                 <?php
@@ -66,10 +66,11 @@ if (isset($_SESSION['flag'])) {
                             <div class="box">
                                 <img src="../controller/uploaded_img/<?php echo $fetch_product['image']; ?>" alt="">
                                 <h3><?php echo $fetch_product['name']; ?></h3>
-                                <div class="price">$<?php echo $fetch_product['price']; ?>/-</div>
+                                <div class="price"><?php echo $fetch_product['price']; ?> tk</div>
                                 <input type="hidden" name="product_name" value="<?php echo $fetch_product['name']; ?>">
                                 <input type="hidden" name="product_price" value="<?php echo $fetch_product['price']; ?>">
                                 <input type="hidden" name="product_image" value="<?php echo $fetch_product['image']; ?>">
+
                                 <input type="submit" class="btn" value="add to cart" name="add_to_cart">
                             </div>
                         </form>
@@ -83,7 +84,7 @@ if (isset($_SESSION['flag'])) {
 
         </section>
 
-
+<!-- jquery ajax -->
         <section id="main">
             <script src="../Controller/customerquery.js"></script>
         </section>

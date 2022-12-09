@@ -38,6 +38,7 @@ if (isset($_SESSION['flag'])) {
                 <input type="text" name="p_name" placeholder="enter the product name" class="box" required>
                 <input type="number" name="p_price" min="0" placeholder="enter the product price" class="box" required>
                 <input type="file" name="p_image" accept="image/png, image/jpg, image/jpeg" class="box" required>
+
                 <input type="submit" value="add the product" name="add_product" class="btn">
             </form>
 
@@ -67,9 +68,12 @@ if (isset($_SESSION['flag'])) {
                                     <td><img src="../controller/uploaded_img/<?php echo $row['image']; ?>" height="100" alt=""></td>
                                     <td><?php echo $row['name']; ?></td>
                                     <td><?php echo $row['price']; ?> Tk</td>
+
                                     <td>
                                         <a href="../controller/productcontroller.php?delete=<?php echo $row['id']; ?>" class="delete-btn" onclick="return confirm('are your sure you want to delete this?');"> <i class="fas fa-trash"></i> delete </a>
+
                                         <a href="updateproduct.php?edit=<?php echo $row['id']; ?>" class="option-btn"> <i class="fas fa-edit"></i> update </a>
+                                        
                                     </td>
                                 </tr>
 

@@ -37,6 +37,8 @@ if (isset($_SESSION['flag'])) {
                 <h3 class=""><?php echo $_GET['message']; ?></h3> <br>
             <?php } ?>
         </center>
+
+        <!-- jqurey ajax -->
         <section class="main">
 
 
@@ -64,7 +66,7 @@ if (isset($_SESSION['flag'])) {
         <section id="main">
             <script src="../Controller/managerquery.js"></script>
         </section>
-
+<!-- jquery ajax -->
     </body>
 
     <br> <br>
